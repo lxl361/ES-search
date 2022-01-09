@@ -31,14 +31,13 @@
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/profile/questions">我的问题</a></li>
-                        <!--                        <li><a href="#">个人资料</a></li>-->
-                        <!--                        <li><a href="#">消息中心</a></li>-->
                         <li><a href="/exit">退出登录</a></li>
                     </ul>
                 </li>
 
                 <li th:if="${session.user==null}">
-                    <a href="https://github.com/login/oauth/authorize?client_id=f94384b2dc5fa4119a72&redirect_uri=http://localhost:10086/callback&scope=user&state=1">登录</a></li>
+                    <a href="https://github.com/login/oauth/authorize?client_id=f94384b2dc5fa4119a72&redirect_uri=http://localhost:10086/callback&scope=user&state=1">登录</a>
+                </li>
             </ul>
         </div>
     </div>

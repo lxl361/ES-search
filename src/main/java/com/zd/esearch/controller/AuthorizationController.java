@@ -74,4 +74,15 @@ public class AuthorizationController {
         //System.out.println("---user---"+user.getName());
         //return "index";
     }
+
+
+    @GetMapping("/exit")
+    public String logout(HttpServletRequest request,
+                         HttpServletResponse response){
+        request.getSession().removeAttribute("user");//移除session
+        Cookie cookie = new Cookie("token",null);
+        cookie.setMaxAge(0);
+        response.addCookie(cookie);
+        return "redirect:/";
+    }
 }
