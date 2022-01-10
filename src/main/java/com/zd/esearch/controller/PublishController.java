@@ -35,7 +35,6 @@ public class PublishController {
         model.addAttribute("description",description);
         model.addAttribute("tag",tag);
         User user =(User) request.getSession().getAttribute("user");
-        //User user=null;
         if (user==null){
             model.addAttribute("error","用户未登陆");
             return "publish";
@@ -44,7 +43,7 @@ public class PublishController {
             model.addAttribute("error","问题标题不能为空");
             return "publish";
         }
-
+        //User user =(User) request.getSession().getAttribute("user");
         if (description==null || description==""){
             model.addAttribute("error","问题补充不能为空");
             return "publish";
@@ -54,25 +53,8 @@ public class PublishController {
             model.addAttribute("error","标签不能为空,并且以逗号隔开");
             return "publish";
         }
-        Cookie[] cookies = request.getCookies();
-        if (cookies!=null&& cookies.length!=0) {
-            for (Cookie cookie : cookies) {
-                if ("token".equals(cookie.getName())) {
-                    String token = cookie.getValue();
-                     user = userMapper.findByToken(token);
-                    if (user != null) {
-                        request.getSession().setAttribute("user", user);
-                    }
-                    break;
-                }
-            }
-        }
 
-        //User user =(User) request.getSession().getAttribute("user");
-//        if (user==null){
-//            model.addAttribute("error","用户未登陆");
-//            return "publish";
-//        }
+
         Question question = new Question();
         question.setTitle(title);
         question.setDescription(description);
