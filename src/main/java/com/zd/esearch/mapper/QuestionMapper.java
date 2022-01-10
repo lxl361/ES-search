@@ -12,7 +12,6 @@ public interface QuestionMapper {
     @Insert("insert into question (title,description,gmt_create,gmt_modified,tag,creator) values(#{title},#{description},#{gmtCreate},#{gmtModified},#{tag},#{creator})")
     void create(Question question);
 
-
     @Select("select * from question limit #{offset},#{size}")
     List<Question> list(@Param(value = "offset") Integer offset, Integer size);
 
@@ -20,8 +19,9 @@ public interface QuestionMapper {
     Integer count();
 
     @Select("select * from question where creator=#{userId} limit #{offset},#{size}")
-    List<Question> listByUserId(@Param("userId") Integer userId, @Param(value = "offset") Integer offset, @Param("size") Integer size);
+    List<Question> listById(@Param("userId") Integer userId, @Param(value = "offset") Integer offset, @Param("size") Integer size);
 
-    @Select("select count(1) from question where creator=#{userId}")
-    Integer countByUserId(@Param("userId") Integer userId);
+//    @Select("select count(1) from question where creator=#{userId}")
+//    Integer countByUserId(@Param("userId") Integer userId);
+
 }
