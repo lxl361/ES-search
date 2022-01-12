@@ -1,6 +1,7 @@
 package com.zd.esearch.mapper;
 
 
+import com.zd.esearch.dto.QuestionDTO;
 import com.zd.esearch.model.Question;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
@@ -20,6 +21,10 @@ public interface QuestionMapper {
 
     @Select("select * from question where creator=#{userId} limit #{offset},#{size}")
     List<Question> listById(@Param("userId") Integer userId, @Param(value = "offset") Integer offset, @Param("size") Integer size);
+
+    @Select("select * from question where id=#{id}")
+    Question getById(@Param("id") Integer id);
+
 
 //    @Select("select count(1) from question where creator=#{userId}")
 //    Integer countByUserId(@Param("userId") Integer userId);

@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * @author LC溪苏
  * @version 1.0
- * @description: TODO
+ * @description: 拦截器(去除@EnableWebMvc解决资源无法加载问题)
  * @date 2022/1/10 0010 17:49
  */
 @Configuration
