@@ -25,7 +25,7 @@
 
             </div>
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <a th:href="@{'/publish/'+${question.id}}" class="communitity-menu">
+            <a th:href="@{'/publish/'+${question.id}}" class="communitity-menu" th:if="${session.user!=null && session.user.id==question.creator}">
                 <span class="glyphicon glyphicon glyphicon glyphicon-pencil" aria-hidden="true">
 
                 </span>
