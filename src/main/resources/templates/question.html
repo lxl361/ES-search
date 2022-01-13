@@ -21,10 +21,14 @@
                 阅读数: <span th:text="${question.viewCount}"></span>
                 </span>
             <hr>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:text="${question.description}"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:text="${question.description}">
+
+            </div>
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <a th:href="@{'/publish/'+${question.id}}" class="communitity-menu">
-                <span class="glyphicon glyphicon glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon glyphicon glyphicon-pencil" aria-hidden="true">
+
+                </span>
                 编辑
             </a>
         </div>
@@ -39,7 +43,9 @@
                     </div>
                     <div class="media-body">
                         <h4 class="media-heading">
-                            <span th:href="@{'/question/'+${question.id}}" th:text="${question.user.name}"></span>
+                            <span th:href="@{'/question/'+${question.id}}" th:text="${question.user.name}">
+
+                            </span>
                         </h4>
                     </div>
                 </div>
