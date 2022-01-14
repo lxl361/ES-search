@@ -1,11 +1,11 @@
 package com.zd.esearch.mapper;
 
 
-import com.zd.esearch.dto.QuestionDTO;
 import com.zd.esearch.model.Question;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -24,6 +24,9 @@ public interface QuestionMapper {
 
     @Select("select * from question where id=#{id}")
     Question getById(@Param("id") Integer id);
+
+    @Update("update question set title=#{title}, description=#{description}, gmt_modified=#{gmtModified}, tag=#{tag} where id=#{id}")
+    void update(Question question);
 
 
 //    @Select("select count(1) from question where creator=#{userId}")
