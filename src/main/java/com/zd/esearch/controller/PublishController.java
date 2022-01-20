@@ -1,7 +1,6 @@
 package com.zd.esearch.controller;
 
 import com.zd.esearch.dto.QuestionDTO;
-import com.zd.esearch.mapper.QuestionMapper;
 import com.zd.esearch.model.Question;
 import com.zd.esearch.model.User;
 import com.zd.esearch.service.QuestionService;
@@ -41,7 +40,7 @@ public class PublishController {
     public String doPublish(@RequestParam("title") String title,
                             @RequestParam("description") String description,
                             @RequestParam("tag") String tag,
-                            @RequestParam("id") Integer id,
+                            @RequestParam(value = "id",required = false) Integer id,
                             HttpServletRequest request,
                             Model model){
         model.addAttribute("title",title);

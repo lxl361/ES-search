@@ -2,7 +2,6 @@ package com.zd.esearch.controller;
 
 import com.zd.esearch.dto.AccessTokenDTO;
 import com.zd.esearch.dto.GithubUser;
-import com.zd.esearch.mapper.UserMapper;
 import com.zd.esearch.model.User;
 import com.zd.esearch.provider.GithubProvider;
 import com.zd.esearch.service.UserService;
