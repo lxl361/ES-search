@@ -17,7 +17,6 @@ public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-
     public void createOrUpdate(User user) {
         User dbuser=userMapper.findByAccountId(user.getAccountId());
         if (dbuser==null){
