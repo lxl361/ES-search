@@ -107,7 +107,7 @@ public class QuestionService {
             questionMapper.create(question);
         }else {
             //更新
-            question.setGmtModified(question.getGmtCreate());
+            question.setGmtModified(System.currentTimeMillis());
             questionMapper.update(question);
         }
     }
