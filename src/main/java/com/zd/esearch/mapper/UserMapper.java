@@ -1,6 +1,5 @@
 package com.zd.esearch.mapper;
 
-import com.zd.esearch.model.Question;
 import com.zd.esearch.model.User;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
