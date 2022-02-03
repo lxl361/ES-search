@@ -1,8 +1,6 @@
 package com.zd.esearch.controller;
 
 import com.zd.esearch.dto.PaginationDTO;
-import com.zd.esearch.mapper.UserMapper;
-import com.zd.esearch.model.User;
 import com.zd.esearch.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 /**

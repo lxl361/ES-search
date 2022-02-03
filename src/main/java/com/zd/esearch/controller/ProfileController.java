@@ -1,7 +1,6 @@
 package com.zd.esearch.controller;
 
 import com.zd.esearch.dto.PaginationDTO;
-import com.zd.esearch.mapper.QuestionMapper;
 import com.zd.esearch.mapper.UserMapper;
 import com.zd.esearch.model.User;
 import com.zd.esearch.service.QuestionService;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -44,7 +42,7 @@ public class ProfileController {
             model.addAttribute("section","replies");
             model.addAttribute("sectionName","最新回复");
         }
-        PaginationDTO paginationDTO = questionService.list(user.getId(), page, size);
+        PaginationDTO paginationDTO = questionService.list((user.getId()).longValue(), page, size);
         model.addAttribute("pagination",paginationDTO);
         return "profile";
     }

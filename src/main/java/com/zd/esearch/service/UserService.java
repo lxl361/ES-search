@@ -2,8 +2,11 @@ package com.zd.esearch.service;
 
 import com.zd.esearch.mapper.UserMapper;
 import com.zd.esearch.model.User;
+import com.zd.esearch.model.UserExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author LC溪苏
@@ -18,19 +21,29 @@ public class UserService {
     private UserMapper userMapper;
 
     public void createOrUpdate(User user) {
-        User dbuser=userMapper.findByAccountId(user.getAccountId());
-        if (dbuser==null){
+        UserExample userExample = new UserExample();
+        userExample.createCriteria().andAccountIdEqualTo(user.getAccountId());
+        List<User> users = userMapper.selectByExample(userExample);
+        if (users.size()==0){
             //插入操作
             user.setGmtCreate(System.currentTimeMillis());
             user.setGmtModified(user.getGmtCreate());
             userMapper.insert(user);
         }else {
             //更新
-            dbuser.setGmtModified(System.currentTimeMillis());
-            dbuser.setAvatarUrl(user.getAvatarUrl());
-            dbuser.setName(user.getName());
-            dbuser.setToken(user.getToken());
-            userMapper.update(dbuser);
+            User dbuser = users.get(0);
+//            dbuser.setGmtModified(System.currentTimeMillis());
+//            dbuser.setAvatarUrl(user.getAvatarUrl());
+//            dbuser.setName(user.getName());
+//            dbuser.setToken(user.getToken());
+            User updateUser = new User();
+            updateUser.setGmtModified(System.currentTimeMillis());
+            updateUser.setAvatarUrl(user.getAvatarUrl());
+            updateUser.setName(user.getName());
+            updateUser.setToken(user.getToken());
+            UserExample expmale=new UserExample();
+            expmale.createCriteria().andIdEqualTo(dbuser.getId());
+            userMapper.updateByExampleSelective(updateUser,expmale);
         }
     }
 }
