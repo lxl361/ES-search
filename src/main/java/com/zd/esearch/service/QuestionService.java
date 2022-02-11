@@ -143,7 +143,7 @@ public class QuestionService {
 //        Question updateQuestion = new Question();
 //        updateQuestion.setViewCount(question.getViewCount()+1);
 //        QuestionExample questionExample = new QuestionExample();
-//        questionExample.createCriteria().andIdEqualTo(id);
+//       questionExample.createCriteria().andIdEqualTo(id);
         Question question = new Question();
         question.setId(id);
         question.setViewCount(1);

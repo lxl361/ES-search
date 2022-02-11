@@ -32,7 +32,13 @@
                     </h4>
                     <span th:text="${question.description}"></span><br>
                     <span class="text-desc">
-                        <span th:text="${question.commentCount}"></span>个评论 • <span th:text="${question.viewCount}"></span> 次浏览 • <span th:text="${#dates.format(question.gmtCreate,'yyyy年 MM月dd日 HH:mm:ss')}"></span></span>
+                        <span th:text="${question.commentCount}"></span>个评论 •
+                        <span th:text="${question.viewCount}"></span> 次浏览 •
+                         发布时间 :<span th:switch = "${#dates.format(question.gmtCreate)==#dates.format(question.gmtModified)}" >
+                                 <span th:case="true" th:text = "${#dates.format(question.gmtCreate, 'yyyy年 MM月dd日 HH:mm:ss' )}" ></span>
+                                <span th:case="false" th:text = "${#dates.format(question.gmtModified,'yyyy年 MM月dd日 HH:mm:ss')}" ></span>
+                                 </span>
+                    </span>
                 </div>
             </div>
 
