@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * @author LC溪苏
  * @version 1.0
- * @description: TODO
+ * @description: 处理4XX和5XX的异常,即处理一些CustomizeExceptionHandler无法处理的异常
  * @date 2022/2/2 0002 21:01
  */
 @Controller

@@ -20,11 +20,11 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice
 public class CustomizeExceptionHandler {
     @ExceptionHandler(Exception.class)
-    ModelAndView handle(Throwable e, Model model) {
+    public ModelAndView handle(Throwable e, Model model) {
         if (e instanceof CustomizeException){
-            model.addAttribute("messages",e.getMessage());
+            model.addAttribute("message",e.getMessage());
         }else {
-            model.addAttribute("messages","冒烟了....稍后重新试下吧....");
+            model.addAttribute("message","冒烟了....稍后重新试下吧....");
         }
         return new ModelAndView("error");
     }

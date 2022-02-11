@@ -1,14 +1,21 @@
 package com.zd.esearch.controller;
 
 import com.zd.esearch.dto.CommentDTO;
+import com.zd.esearch.dto.ResultDTO;
+import com.zd.esearch.exception.CustomizeErrorCode;
 import com.zd.esearch.mapper.CommentMapper;
 import com.zd.esearch.model.Comment;
+import com.zd.esearch.model.User;
+import com.zd.esearch.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 
 /**
  * @author LC溪苏
@@ -20,17 +27,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class CommentController {
     @Autowired
     private CommentMapper commentMapper;
+    @Autowired
+    private CommentService commentService;
     @ResponseBody
     @PostMapping("/comment")
-    public Object  post(@RequestBody CommentDTO commentDTO){
+    public Object  post(@RequestBody CommentDTO commentDTO,
+                        HttpServletRequest request){
+        User user =(User) request.getSession().getAttribute("user");
+        if (user==null){
+            //return ResultDTO.errOf(CustomizeErrorCode.NO_LOGIN);
+        }
         Comment comment = new Comment();
         comment.setParentId(commentDTO.getParentId());
         comment.setContent(commentDTO.getContent());
-        comment.setCommentator(1);
+        comment.setCommentator(user.getId());
         comment.setType(commentDTO.getType());
         comment.setGmtModified(System.currentTimeMillis());
         comment.setGmtCreate(System.currentTimeMillis());
-        commentMapper.insert(comment);
-        return null;
+        commentService.insert(comment);
+        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+        objectObjectHashMap.put("message","成功");
+        return objectObjectHashMap;
     }
 }

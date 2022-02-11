@@ -3,6 +3,7 @@ import com.zd.esearch.dto.PaginationDTO;
 import com.zd.esearch.dto.QuestionDTO;
 import com.zd.esearch.exception.CustomizeErrorCode;
 import com.zd.esearch.exception.CustomizeException;
+import com.zd.esearch.exception.ICustomizeErrorCode;
 import com.zd.esearch.mapper.QuestionExtMapper;
 import com.zd.esearch.mapper.QuestionMapper;
 import com.zd.esearch.mapper.UserMapper;
