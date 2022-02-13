@@ -11,6 +11,7 @@ import com.zd.esearch.model.Question;
 import com.zd.esearch.model.QuestionExample;
 import com.zd.esearch.model.User;
 import org.apache.ibatis.session.RowBounds;
+import org.ocpsoft.prettytime.PrettyTime;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

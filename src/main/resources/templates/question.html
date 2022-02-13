@@ -22,7 +22,7 @@
                 发布时间 :<span th:switch = "${#dates.format(question.gmtCreate)==#dates.format(question.gmtModified)}" >
                     <span th:case="true" th:text = "${#dates.format(question.gmtCreate, 'yyyy年 MM月dd日 HH:mm:ss' )}" ></span>
                     <span th:case="false" th:text = "${#dates.format(question.gmtModified,'yyyy年 MM月dd日 HH:mm:ss')}" ></span>
-                </span>
+                </span> |
 
                 阅读数: <span th:text="${question.viewCount}"></span>
                 </span>

@@ -35,6 +35,12 @@
             <artifactId>okhttp</artifactId>
             <version>4.4.0</version>
         </dependency>
+        <!--使用prettyTime实现几分钟前，几小时前，几天前-->
+        <dependency>
+            <groupId>org.ocpsoft.prettytime</groupId>
+            <artifactId>prettytime</artifactId>
+            <version>5.0.2.Final</version>
+        </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
