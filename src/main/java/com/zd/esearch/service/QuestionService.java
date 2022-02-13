@@ -1,9 +1,9 @@
 package com.zd.esearch.service;
+
 import com.zd.esearch.dto.PaginationDTO;
 import com.zd.esearch.dto.QuestionDTO;
 import com.zd.esearch.exception.CustomizeErrorCode;
 import com.zd.esearch.exception.CustomizeException;
-import com.zd.esearch.exception.ICustomizeErrorCode;
 import com.zd.esearch.mapper.QuestionExtMapper;
 import com.zd.esearch.mapper.QuestionMapper;
 import com.zd.esearch.mapper.UserMapper;
@@ -11,7 +11,6 @@ import com.zd.esearch.model.Question;
 import com.zd.esearch.model.QuestionExample;
 import com.zd.esearch.model.User;
 import org.apache.ibatis.session.RowBounds;
-import org.ocpsoft.prettytime.PrettyTime;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -57,7 +56,7 @@ public class QuestionService {
         List<QuestionDTO> questionDTOList=new ArrayList<>();
 
         for (Question question : questions) {
-            User user=userMapper.selectByPrimaryKey((question.getCreator()).intValue());
+            User user=userMapper.selectByPrimaryKey((question.getCreator()));
             QuestionDTO questionDTO = new QuestionDTO();
             BeanUtils.copyProperties(question,questionDTO);
             questionDTO.setUser(user);
@@ -94,7 +93,7 @@ public class QuestionService {
         List<QuestionDTO> questionDTOList=new ArrayList<>();
 
         for (Question question : questions) {
-            User user=userMapper.selectByPrimaryKey((question.getCreator()).intValue());
+            User user=userMapper.selectByPrimaryKey((question.getCreator()));
             QuestionDTO questionDTO = new QuestionDTO();
             BeanUtils.copyProperties(question,questionDTO);
             questionDTO.setUser(user);
@@ -105,14 +104,14 @@ public class QuestionService {
         return paginationDTO;
     }
 
-    public QuestionDTO getById(Integer id) {
+    public QuestionDTO getById(Long id) {
         Question question=questionMapper.selectByPrimaryKey(id);
         if (question==null){
             throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
         }
         QuestionDTO questionDTO = new QuestionDTO();
         BeanUtils.copyProperties(question,questionDTO);
-        User user=userMapper.selectByPrimaryKey((question.getCreator()).intValue());
+        User user=userMapper.selectByPrimaryKey((question.getCreator()));
         questionDTO.setUser(user);
         return questionDTO;
     }
@@ -122,6 +121,9 @@ public class QuestionService {
             //创建
             question.setGmtCreate(System.currentTimeMillis());
             question.setGmtModified(question.getGmtCreate());
+            question.setViewCount(0);
+            question.setLikeCount(0);
+            question.setCommentCount(0);
             questionMapper.insertSelective(question);//使用insertSelective解决默认值0不生效的问题
         }else {
             //更新
@@ -139,7 +141,7 @@ public class QuestionService {
         }
     }
 
-    public void incView(Integer id) {
+    public void incView(Long id) {
 //        Question question = questionMapper.selectByPrimaryKey(id);
 //        Question updateQuestion = new Question();
 //        updateQuestion.setViewCount(question.getViewCount()+1);

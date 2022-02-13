@@ -1,5 +1,7 @@
 package com.zd.esearch.dto;
 
+import com.zd.esearch.exception.CustomizeErrorCode;
+import com.zd.esearch.exception.CustomizeException;
 import lombok.Data;
 
 /**
@@ -18,4 +20,21 @@ public class ResultDTO {
         resultDTO.setMessage(message);
         return resultDTO;
     }
+
+    public static ResultDTO errOf(CustomizeErrorCode errorCode) {
+        return errOf(errorCode.getCode(),errorCode.getMessage());
+    }
+
+    public static ResultDTO errOf(CustomizeException e) {
+        return errOf(e.getCode(),e.getMessage());
+    }
+
+    public static ResultDTO okOf(){
+        ResultDTO resultDTO = new ResultDTO();
+        resultDTO.setCode(200);
+        resultDTO.setMessage("请求成功");
+        return resultDTO;
+    }
+
+
 }

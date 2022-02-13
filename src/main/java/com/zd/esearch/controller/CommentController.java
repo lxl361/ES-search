@@ -26,8 +26,6 @@ import java.util.HashMap;
 @Controller
 public class CommentController {
     @Autowired
-    private CommentMapper commentMapper;
-    @Autowired
     private CommentService commentService;
     @ResponseBody
     @PostMapping("/comment")
@@ -35,18 +33,17 @@ public class CommentController {
                         HttpServletRequest request){
         User user =(User) request.getSession().getAttribute("user");
         if (user==null){
-            //return ResultDTO.errOf(CustomizeErrorCode.NO_LOGIN);
+            return ResultDTO.errOf(CustomizeErrorCode.N0_LOGIN);
         }
         Comment comment = new Comment();
         comment.setParentId(commentDTO.getParentId());
         comment.setContent(commentDTO.getContent());
         comment.setCommentator(user.getId());
         comment.setType(commentDTO.getType());
+        comment.setLikeCount(0L);
         comment.setGmtModified(System.currentTimeMillis());
         comment.setGmtCreate(System.currentTimeMillis());
         commentService.insert(comment);
-        HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
-        objectObjectHashMap.put("message","成功");
-        return objectObjectHashMap;
+        return ResultDTO.okOf();
     }
 }
