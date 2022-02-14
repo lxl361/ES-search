@@ -1,5 +1,8 @@
 package com.zd.esearch.enums;
 
+/**
+ * 评论枚举类:1为问题   2为评论
+ */
 public enum CommentTypeEnum {
     QUESTION(1),
     COMMENT(2);
