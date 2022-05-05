@@ -1,0 +1,234 @@
+2022-05-04 14:14:13.377 [main] INFO  com.zd.esearch.EsearchApplication - Starting EsearchApplication using Java 11.0.12 on ZDSH with PID 7792 (D:\ideaworkspace\esearch\target\classes started by ZD in D:\ideaworkspace\esearch)
+2022-05-04 14:14:13.379 [main] INFO  com.zd.esearch.EsearchApplication - No active profile set, falling back to default profiles: default
+2022-05-04 14:14:14.222 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 10086 (http)
+2022-05-04 14:14:14.231 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10086"]
+2022-05-04 14:14:14.232 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-04 14:14:14.232 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-04 14:14:14.321 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-04 14:14:14.321 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 907 ms
+2022-05-04 14:14:14.996 [main] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-05-04 14:14:15.262 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10086"]
+2022-05-04 14:14:15.290 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 10086 (http) with context path ''
+2022-05-04 14:14:15.311 [main] INFO  com.zd.esearch.EsearchApplication - Started EsearchApplication in 2.394 seconds (JVM running for 3.717)
+2022-05-04 14:14:30.136 [http-nio-10086-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-04 14:14:30.137 [http-nio-10086-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-04 14:14:30.138 [http-nio-10086-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-04 14:14:30.192 [http-nio-10086-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-04 14:14:30.325 [http-nio-10086-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-04 14:14:30.332 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - ==>  Preparing: select count(*) from QUESTION
+2022-05-04 14:14:30.347 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - ==> Parameters: 
+2022-05-04 14:14:30.360 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - <==      Total: 1
+2022-05-04 14:14:30.369 [http-nio-10086-exec-1] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-04 14:14:30.371 [http-nio-10086-exec-1] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - ==> Parameters: 3(Integer)
+2022-05-04 14:14:30.372 [http-nio-10086-exec-1] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - <==      Total: 3
+2022-05-04 14:14:30.373 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-04 14:14:30.375 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-04 14:14:30.376 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-04 14:14:30.381 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-04 14:14:30.381 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-04 14:14:30.382 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-04 14:14:30.382 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-04 14:14:30.383 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-04 14:14:30.383 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-04 14:14:37.562 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? )
+2022-05-04 14:14:37.563 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 85269036(String)
+2022-05-04 14:14:37.563 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-04 14:14:37.566 [http-nio-10086-exec-9] DEBUG c.z.e.mapper.UserMapper.updateByExampleSelective - ==>  Preparing: update USER SET NAME = ?, TOKEN = ?, GMT_MODIFIED = ?, AVATAR_URL = ? WHERE ( ID = ? )
+2022-05-04 14:14:37.568 [http-nio-10086-exec-9] DEBUG c.z.e.mapper.UserMapper.updateByExampleSelective - ==> Parameters: ZD-溪苏(String), 2ac335fd-d5a4-4ec2-8c70-1a918cf2cae6(String), 1651644877564(Long), https://avatars.githubusercontent.com/u/85269036?v=4(String), 3734(Long)
+2022-05-04 14:14:37.572 [http-nio-10086-exec-9] DEBUG c.z.e.mapper.UserMapper.updateByExampleSelective - <==    Updates: 1
+2022-05-04 14:14:37.586 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-04 14:14:37.587 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 2ac335fd-d5a4-4ec2-8c70-1a918cf2cae6(String)
+2022-05-04 14:14:37.589 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-04 14:14:38.031 [http-nio-10086-exec-10] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [437] milliseconds.
+2022-05-04 14:14:38.034 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - ==>  Preparing: select count(*) from QUESTION
+2022-05-04 14:14:38.034 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - ==> Parameters: 
+2022-05-04 14:14:38.034 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - <==      Total: 1
+2022-05-04 14:14:38.035 [http-nio-10086-exec-10] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-04 14:14:38.035 [http-nio-10086-exec-10] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - ==> Parameters: 3(Integer)
+2022-05-04 14:14:38.037 [http-nio-10086-exec-10] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - <==      Total: 3
+2022-05-04 14:14:38.037 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-04 14:14:38.037 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-04 14:14:38.038 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-04 14:14:38.039 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-04 14:14:38.039 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-04 14:14:38.040 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-04 14:14:38.040 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-04 14:14:38.041 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-04 14:14:38.041 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-05 07:59:53.722 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-05 07:59:53.737 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 2ac335fd-d5a4-4ec2-8c70-1a918cf2cae6(String)
+2022-05-05 07:59:53.743 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-05 07:59:53.813 [http-nio-10086-exec-2] ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][http-nio-10086-exec-2] Exception processing template "index": Exception evaluating SpringEL expression: "pagination.questions" (template: "index" - line 24, col 32)
+org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "pagination.questions" (template: "index" - line 24, col 32)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:292)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'questions' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	... 59 common frames omitted
+2022-05-05 07:59:53.824 [http-nio-10086-exec-2] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Exception evaluating SpringEL expression: "pagination.questions" (template: "index" - line 24, col 32)] with root cause
+org.springframework.expression.spel.SpelEvaluationException: EL1007E: Property or field 'questions' cannot be found on null
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.readProperty(PropertyOrFieldReference.java:213)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.getValueInternal(PropertyOrFieldReference.java:104)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference.access$000(PropertyOrFieldReference.java:51)
+	at org.springframework.expression.spel.ast.PropertyOrFieldReference$AccessorLValue.getValue(PropertyOrFieldReference.java:406)
+	at org.springframework.expression.spel.ast.CompoundExpression.getValueInternal(CompoundExpression.java:92)
+	at org.springframework.expression.spel.ast.SpelNodeImpl.getValue(SpelNodeImpl.java:112)
+	at org.springframework.expression.spel.standard.SpelExpression.getValue(SpelExpression.java:337)
+	at org.thymeleaf.spring5.expression.SPELVariableExpressionEvaluator.evaluate(SPELVariableExpressionEvaluator.java:265)
+	at org.thymeleaf.standard.expression.VariableExpression.executeVariableExpression(VariableExpression.java:166)
+	at org.thymeleaf.standard.expression.SimpleExpression.executeSimple(SimpleExpression.java:66)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:109)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:138)
+	at org.thymeleaf.standard.expression.Expression.execute(Expression.java:125)
+	at org.thymeleaf.standard.processor.StandardEachTagProcessor.doProcess(StandardEachTagProcessor.java:73)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1401)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1145)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1084)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:895)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1732)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2022-05-05 07:59:53.832 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-05 07:59:53.832 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 2ac335fd-d5a4-4ec2-8c70-1a918cf2cae6(String)
+2022-05-05 07:59:53.833 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-05 07:59:55.517 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-05 07:59:55.519 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 2ac335fd-d5a4-4ec2-8c70-1a918cf2cae6(String)
+2022-05-05 07:59:55.520 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-05 07:59:55.526 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - ==>  Preparing: select count(*) from QUESTION
+2022-05-05 07:59:55.526 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - ==> Parameters: 
+2022-05-05 07:59:55.529 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - <==      Total: 1
+2022-05-05 07:59:55.531 [http-nio-10086-exec-7] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-05 07:59:55.531 [http-nio-10086-exec-7] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - ==> Parameters: 3(Integer)
+2022-05-05 07:59:55.532 [http-nio-10086-exec-7] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - <==      Total: 3
+2022-05-05 07:59:55.533 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-05 07:59:55.533 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-05 07:59:55.534 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-05 07:59:55.534 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-05 07:59:55.535 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-05 07:59:55.535 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-05 07:59:55.535 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-05 07:59:55.536 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-05 07:59:55.536 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-05 08:00:00.312 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-05 08:00:00.313 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 2ac335fd-d5a4-4ec2-8c70-1a918cf2cae6(String)
+2022-05-05 08:00:00.314 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-05 08:00:00.315 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - ==>  Preparing: select count(*) from QUESTION
+2022-05-05 08:00:00.315 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - ==> Parameters: 
+2022-05-05 08:00:00.315 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.countByExample - <==      Total: 1
+2022-05-05 08:00:00.316 [http-nio-10086-exec-10] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-05 08:00:00.316 [http-nio-10086-exec-10] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - ==> Parameters: 3(Integer), 42(Long)
+2022-05-05 08:00:00.318 [http-nio-10086-exec-10] DEBUG c.z.e.m.Q.selectByExampleWithRowbounds - <==      Total: 1
+2022-05-05 08:00:00.319 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-05 08:00:00.319 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3734(Long)
+2022-05-05 08:00:00.323 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1

@@ -39,7 +39,7 @@
                                  <span th:case="true" th:text = "${#dates.format(question.gmtCreate, 'yyyy年 MM月dd日 HH:mm:ss' )}" ></span>
                                 <span th:case="false" th:text = "${#dates.format(question.gmtModified,'yyyy年 MM月dd日 HH:mm:ss')}" ></span>
                                  </span> •
-                        更新于 :<span class="time" th:datetime="${question.gmtModified}">
+                        发布于 :<span class="time" th:datetime="${question.gmtModified}">
 
                     </span>
                         </script>

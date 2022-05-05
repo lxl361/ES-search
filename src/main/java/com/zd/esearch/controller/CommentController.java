@@ -3,7 +3,6 @@ package com.zd.esearch.controller;
 import com.zd.esearch.dto.CommentDTO;
 import com.zd.esearch.dto.ResultDTO;
 import com.zd.esearch.exception.CustomizeErrorCode;
-import com.zd.esearch.mapper.CommentMapper;
 import com.zd.esearch.model.Comment;
 import com.zd.esearch.model.User;
 import com.zd.esearch.service.CommentService;
@@ -11,16 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
 
 /**
  * @author LC溪苏
  * @version 1.0
- * @description: TODO
+ * @description: 评论控制器
  * @date 2022/2/3 0003 8:39
  */
 @Controller
