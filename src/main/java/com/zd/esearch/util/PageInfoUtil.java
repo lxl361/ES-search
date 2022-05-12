@@ -1,8 +1,15 @@
-###mybatis-generator
-###mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
+package com.zd.esearch.util;
 
-### pageutil
-```
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageInfo;
+import org.springframework.beans.BeanUtils;
+
+/**
+ * @author LC溪苏
+ * @version 1.0
+ * @description: TODO
+ * @date 2022/5/12 0012 8:28
+ */
 public class PageInfoUtil {
     /**
      * pageInfo泛型转换
@@ -34,40 +41,3 @@ public class PageInfoUtil {
         return new PageInfo<D>(page, pageInfoE.getNavigatePages());
     }
 }
-```
-### service 
-```java
-/**
- * @Author LC溪苏
- * @create 2020/1/15 15:33
- */
-@Service
-public class QuestionService implements QuestionServiceImpl {
-    @Autowired
-    QuestionMapper questionMapper;
-    @Autowired
-    UserMapper userMapper;
-
-    @Override
-    public PageInfo<QuestionDTO> getquestionDTOPageInfo(int page, int size) {
-        //开始分页
-        PageHelper.startPage(page, size);
-         //查询并生成pageInfo
-        PageInfo<Question> questionpageInfo = new PageInfo<>(questionMapper.getAllQuestions(), 5);
-        return getquestionDTOPageInfo(questionpageInfo);
-    }
-
-    @Override
-    public PageInfo<QuestionDTO> getquestionDTOPageInfo(PageInfo<Question> pageInfo) {
-        //使用PageInfoUtil将entity转为dto
-        PageInfo<QuestionDTO> questionDTOPageInfo = PageInfoUtil.pageInfo2DTO(pageInfo, QuestionDTO.class);
-        //添加新增的属性
-        for (QuestionDTO questionDTO : questionDTOPageInfo.getList()) {
-            User user = userMapper.findByID(questionDTO.getCreator());
-            questionDTO.setUser(user.getName());
-        }
-        return questionDTOPageInfo;
-    }
-}
-
-```

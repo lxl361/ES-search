@@ -1,6 +1,8 @@
 package com.zd.esearch.controller;
 
+import com.github.pagehelper.PageInfo;
 import com.zd.esearch.dto.PaginationDTO;
+import com.zd.esearch.dto.QuestionDTO;
 import com.zd.esearch.model.User;
 import com.zd.esearch.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +41,10 @@ public class ProfileController {
             model.addAttribute("section","replies");
             model.addAttribute("sectionName","最新回复");
         }
-        PaginationDTO paginationDTO = questionService.list((user.getId()).longValue(), page, size);
-        model.addAttribute("pagination",paginationDTO);
+        PageInfo<QuestionDTO> paginationDTO = questionService.list((user.getId()).longValue(), page, size);
+        PageInfo<QuestionDTO> pagination = new PageInfo<QuestionDTO>(paginationDTO.getList());
+        model.addAttribute("paginationDTO",paginationDTO.getList());
+        model.addAttribute("pagination",pagination);
         return "profile";
     }
 }

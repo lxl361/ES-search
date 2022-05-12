@@ -17,7 +17,7 @@
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <h2><span th:text="${sectionName}"></span></h2>
             <hr>
-            <div class="media" th:each="question:${pagination.questions}">
+            <div class="media" th:each="question:${paginationDTO}">
                 <div class="media-left">
                     <a href="#">
                         <img class="media-object img-rounded"
@@ -38,32 +38,37 @@
             </div>
             <nav aria-label="Page navigation">
                 <ul class="pagination">
-                    <li th:if="${pagination.showFirstPage}">
+                    <li th:if="${pagination.pageNum>1}">
                         <a th:href="@{'/profile/'+${section}(page=${1})}" aria-label="Previous">
                             <span aria-hidden="true">&lt;&lt;</span>
                         </a>
                     </li>
-                    <li th:if="${pagination.showPrevious}">
-                        <a th:href="@{'/profile/'+${section}(page=${pagination.page -1})}" aria-label="Previous">
+                    <li th:if="${pagination.hasPreviousPage}">
+                        <a th:href="@{'/profile/'+${section}(page=${pagination.prePage})}" aria-label="Previous">
                             <span aria-hidden="true">&lt;</span>
                         </a>
                     </li>
-                    <li th:each="page:${pagination.pages}" th:class="${pagination.page==page}?'active':''">
+                    <li th:each="page:${pagination.navigatepageNums}" th:class="${page==pagination.pageNum}?'active':''">
                         <a th:href="@{'/profile/'+${section}(page=${page})}" th:text="${page}">
                         </a>
                     </li>
-                    <li th:if="${pagination.showNext}">
-                        <a th:href="@{'/profile/'+${section}(page=${pagination.page +1})}" aria-label="Previous">
+                    <li th:if="${pagination.hasNextPage}">
+                        <a th:href="@{'/profile/'+${section}(page=${pagination.nextPage})}" aria-label="Previous">
                             <span aria-hidden="true">&gt;</span>
                         </a>
                     </li>
-                    <li th:if="${pagination.showEndPage}">
-                        <a th:href="@{'/profile/'+${section}(page=${pagination.totalPage})}" aria-label="Previous">
+                    <li th:if="${pagination.pageNum>1 && pagination.pageNum<pagination.total}">
+                        <a th:href="@{'/profile/'+${section}(page=${pagination.pages})}" aria-label="Previous">
                             <span aria-hidden="true">&gt;&gt;</span>
                         </a>
                     </li>
                 </ul>
             </nav>
+            <div class="modal-footer no-margin-top">
+                <div class="col-md-9">
+                    当前第 <span th:text="${pagination.pageNum}"></span> 页,共 <span th:text="${pagination.pages}"></span> 页.一共 <span th:text="${pagination.total}"></span> 条记录
+                </div>
+            </div>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <div class="list-group section">
