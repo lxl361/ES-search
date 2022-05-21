@@ -1,0 +1,750 @@
+2022-05-13 20:11:54.912 [restartedMain] INFO  com.zd.esearch.EsearchApplication - Starting EsearchApplication using Java 11.0.12 on ZDSH with PID 19108 (D:\ideaworkspace\esearch\target\classes started by ZD in D:\ideaworkspace\esearch)
+2022-05-13 20:11:54.913 [restartedMain] INFO  com.zd.esearch.EsearchApplication - No active profile set, falling back to default profiles: default
+2022-05-13 20:11:54.950 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-13 20:11:54.951 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-13 20:11:55.793 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 10086 (http)
+2022-05-13 20:11:55.802 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10086"]
+2022-05-13 20:11:55.802 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2022-05-13 20:11:55.802 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-05-13 20:11:55.873 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-05-13 20:11:55.873 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 922 ms
+2022-05-13 20:11:55.895 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2022-05-13 20:11:56.019 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2022-05-13 20:11:56.025 [restartedMain] INFO  o.s.b.autoconfigure.h2.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:~/community'
+2022-05-13 20:11:56.413 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2022-05-13 20:11:56.542 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2022-05-13 20:11:56.556 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10086"]
+2022-05-13 20:11:56.568 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 10086 (http) with context path ''
+2022-05-13 20:11:56.579 [restartedMain] INFO  com.zd.esearch.EsearchApplication - Started EsearchApplication in 1.989 seconds (JVM running for 3.774)
+2022-05-13 20:12:13.040 [http-nio-10086-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-13 20:12:13.042 [http-nio-10086-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-05-13 20:12:13.043 [http-nio-10086-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-05-13 20:12:13.118 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-13 20:12:13.130 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-13 20:12:13.141 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-13 20:12:13.142 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-13 20:12:13.144 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer)
+2022-05-13 20:12:13.146 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-13 20:12:13.153 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-13 20:12:13.155 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-13 20:12:13.156 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-13 20:12:13.157 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-13 20:12:13.157 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-13 20:12:13.157 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-13 20:12:13.158 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-13 20:12:13.158 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-13 20:12:13.158 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-13 20:12:25.207 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? )
+2022-05-13 20:12:25.208 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 61382702(String)
+2022-05-13 20:12:25.208 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-13 20:12:25.211 [http-nio-10086-exec-2] DEBUG c.z.e.mapper.UserMapper.updateByExampleSelective - ==>  Preparing: update USER SET NAME = ?, TOKEN = ?, GMT_MODIFIED = ?, AVATAR_URL = ? WHERE ( ID = ? )
+2022-05-13 20:12:25.212 [http-nio-10086-exec-2] DEBUG c.z.e.mapper.UserMapper.updateByExampleSelective - ==> Parameters: LC溪苏(String), 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String), 1652443945209(Long), https://avatars.githubusercontent.com/u/61382702?v=4(String), 3733(Long)
+2022-05-13 20:12:25.215 [http-nio-10086-exec-2] DEBUG c.z.e.mapper.UserMapper.updateByExampleSelective - <==    Updates: 1
+2022-05-13 20:12:25.226 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-13 20:12:25.227 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-13 20:12:25.227 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-13 20:12:25.787 [http-nio-10086-exec-5] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [547] milliseconds.
+2022-05-13 20:12:25.790 [http-nio-10086-exec-5] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-13 20:12:25.790 [http-nio-10086-exec-5] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-13 20:12:25.790 [http-nio-10086-exec-5] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-13 20:12:25.791 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-13 20:12:25.791 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer)
+2022-05-13 20:12:25.791 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-13 20:12:25.792 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-13 20:12:25.792 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-13 20:12:25.793 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-13 20:12:25.793 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-13 20:12:25.793 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-13 20:12:25.793 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-13 20:12:25.793 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-13 20:12:25.793 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-13 20:12:25.794 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-13 20:12:25.829 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-13 20:12:25.829 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-13 20:12:25.829 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-13 20:12:25.830 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-13 20:12:25.830 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-13 20:12:25.830 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-13 20:12:25.831 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-13 20:12:25.831 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-13 20:12:25.831 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-13 20:12:25.831 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-13 20:12:25.832 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-13 20:12:25.832 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-13 20:12:25.832 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-13 20:12:25.833 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-13 20:12:25.833 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-13 20:12:25.858 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-13 20:12:25.858 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-13 20:12:25.859 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:08.378 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:08.381 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:08.383 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:08.394 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:18:08.395 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:18:08.396 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:18:08.397 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-14 10:18:08.398 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer)
+2022-05-14 10:18:08.401 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:18:08.403 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:18:08.405 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:18:08.415 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:18:08.416 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:18:08.417 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:18:08.419 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:18:08.420 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:18:08.420 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:18:08.424 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:18:08.764 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:08.768 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:08.769 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:08.770 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:08.770 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:08.771 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:08.773 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:08.774 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:08.778 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:08.781 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:08.782 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:08.783 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:08.792 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:08.793 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:08.795 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:08.996 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:08.996 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:08.998 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:34.856 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:34.857 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:34.858 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:34.863 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByPrimaryKey - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION where ID = ?
+2022-05-14 10:18:34.863 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByPrimaryKey - ==> Parameters: 1332(Long)
+2022-05-14 10:18:34.866 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:18:34.867 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:18:34.867 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:18:34.867 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:18:34.867 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.QuestionExtMapper.incView - ==>  Preparing: update QUESTION set VIEW_COUNT = VIEW_COUNT + ? where id = ?
+2022-05-14 10:18:34.872 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.QuestionExtMapper.incView - ==> Parameters: 1(Integer), 1332(Long)
+2022-05-14 10:18:34.873 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.QuestionExtMapper.incView - <==    Updates: 1
+2022-05-14 10:18:34.910 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:34.911 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:34.910 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:34.911 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:34.917 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:34.917 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:34.917 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:34.917 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:34.911 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:34.917 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:34.917 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:34.917 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:34.918 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:34.918 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:34.918 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:34.954 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:34.955 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:34.955 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:36.425 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:36.426 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:36.426 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:36.427 [http-nio-10086-exec-8] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:18:36.428 [http-nio-10086-exec-8] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:18:36.428 [http-nio-10086-exec-8] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:18:36.428 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-14 10:18:36.428 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer)
+2022-05-14 10:18:36.429 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:18:36.430 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:18:36.430 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:18:36.430 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:18:36.430 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:18:36.431 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:18:36.431 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:18:36.431 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:18:36.431 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:18:36.431 [http-nio-10086-exec-8] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:18:36.462 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:36.462 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:36.462 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:36.462 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:36.462 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:36.462 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:36.463 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:36.463 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:36.463 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:36.464 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:36.464 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:36.465 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:36.465 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:36.465 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:36.465 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:18:36.488 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:18:36.488 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:18:36.489 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:00.484 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:00.484 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:00.484 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:00.487 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:00.488 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:00.489 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:00.489 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 10:19:00.489 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 3(Long)
+2022-05-14 10:19:00.493 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:19:00.495 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:00.496 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:00.496 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:00.496 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:00.496 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:00.497 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:00.497 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:00.497 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:00.498 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:00.566 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:00.567 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:00.567 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:00.568 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:00.568 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:00.568 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:00.569 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:00.570 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:00.570 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:00.571 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:00.571 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:00.571 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:00.571 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:00.571 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:00.572 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:00.619 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:00.619 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:00.620 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:01.257 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:01.257 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:01.258 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:01.259 [http-nio-10086-exec-4] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:01.259 [http-nio-10086-exec-4] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:01.260 [http-nio-10086-exec-4] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:01.260 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 10:19:01.260 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 18(Long)
+2022-05-14 10:19:01.260 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:19:01.261 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:01.261 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:01.262 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:01.262 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:01.262 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:01.263 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:01.263 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:01.263 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:01.263 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:01.293 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:01.293 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:01.294 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:01.294 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:01.294 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:01.294 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:01.294 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:01.294 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:01.295 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:01.295 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:01.295 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:01.295 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:01.295 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:01.295 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:01.295 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:01.317 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:01.317 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:01.317 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:02.206 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:02.207 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:02.208 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:02.209 [http-nio-10086-exec-2] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:02.209 [http-nio-10086-exec-2] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:02.209 [http-nio-10086-exec-2] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:02.210 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 10:19:02.210 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 51(Long)
+2022-05-14 10:19:02.210 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 2
+2022-05-14 10:19:02.211 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:02.211 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3734(Long)
+2022-05-14 10:19:02.211 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:02.211 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:02.211 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:02.212 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:02.247 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:02.248 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:02.249 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:02.249 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:02.249 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:02.249 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:02.249 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:02.249 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:02.249 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:02.250 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:02.250 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:02.250 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:02.250 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:02.250 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:02.250 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:02.276 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:02.277 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:02.277 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:03.992 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:03.992 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:03.993 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:03.994 [http-nio-10086-exec-3] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:03.994 [http-nio-10086-exec-3] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:03.994 [http-nio-10086-exec-3] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:03.994 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-14 10:19:03.995 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer)
+2022-05-14 10:19:03.995 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:19:03.995 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:03.995 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:03.995 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:03.996 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:03.996 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:03.996 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:03.997 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:03.997 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:03.997 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:04.024 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.025 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.025 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.025 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.025 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.025 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.025 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.026 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.026 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.026 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.026 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.026 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.026 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.026 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.026 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.052 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.052 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.052 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.953 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.953 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.953 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.959 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:04.959 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:04.960 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:04.960 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 10:19:04.960 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 6(Long)
+2022-05-14 10:19:04.961 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:19:04.962 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:04.962 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:04.963 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:04.963 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:04.963 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:04.963 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:04.964 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:04.964 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:04.964 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:04.993 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.994 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.994 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.994 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.994 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.994 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.994 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.994 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.994 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.994 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.994 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.994 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:04.995 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:04.995 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:04.995 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:05.016 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:05.017 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:05.017 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:05.717 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:05.718 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:05.718 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:05.720 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:05.721 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:05.721 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:05.721 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 10:19:05.721 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 6(Long)
+2022-05-14 10:19:05.722 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:19:05.722 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:05.723 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:05.723 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:05.723 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:05.724 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:05.724 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:05.724 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:05.724 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:05.724 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:05.751 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:05.751 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:05.751 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:05.751 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:05.751 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:05.751 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:05.751 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:05.751 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:05.751 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:05.751 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:05.751 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:05.752 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:05.753 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:05.753 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:05.753 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:05.776 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:05.777 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:05.777 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.052 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.052 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.053 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.054 [http-nio-10086-exec-7] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:06.054 [http-nio-10086-exec-7] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:06.055 [http-nio-10086-exec-7] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:06.055 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 10:19:06.055 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 9(Long)
+2022-05-14 10:19:06.055 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:19:06.056 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:06.056 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:06.057 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:06.057 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:06.057 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:06.058 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:06.058 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:06.058 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:06.058 [http-nio-10086-exec-7] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:06.088 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.088 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.089 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.089 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.089 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.089 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.089 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.089 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.089 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.089 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.089 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.089 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.089 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.089 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.089 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.117 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.117 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.117 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.518 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.518 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.519 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.520 [http-nio-10086-exec-4] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:06.520 [http-nio-10086-exec-4] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:06.520 [http-nio-10086-exec-4] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:06.520 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 10:19:06.520 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 12(Long)
+2022-05-14 10:19:06.520 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:19:06.521 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:06.521 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:06.521 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:06.521 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:06.521 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:06.521 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:06.521 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:06.521 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:06.521 [http-nio-10086-exec-4] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:06.551 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.551 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.551 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.552 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.552 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.552 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.552 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.552 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.552 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.552 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.552 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.552 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.551 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.553 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.554 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:06.576 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:06.576 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:06.576 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:07.358 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:07.359 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:07.359 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:07.360 [http-nio-10086-exec-3] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:07.360 [http-nio-10086-exec-3] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:07.360 [http-nio-10086-exec-3] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:07.361 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 10:19:07.361 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 18(Long)
+2022-05-14 10:19:07.361 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:19:07.361 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:07.361 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:07.362 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:07.362 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:07.362 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:07.362 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:07.362 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:07.362 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:07.362 [http-nio-10086-exec-3] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:07.391 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:07.392 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:07.392 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:07.392 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:07.392 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:07.392 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:07.392 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:07.392 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:07.392 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:07.392 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:07.392 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:07.392 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:07.393 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:07.393 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:07.393 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:07.417 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:07.418 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:07.418 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:08.268 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:08.268 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:08.269 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:08.269 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByPrimaryKey - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG , DESCRIPTION from QUESTION where ID = ?
+2022-05-14 10:19:08.269 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByPrimaryKey - ==> Parameters: 1558(Long)
+2022-05-14 10:19:08.270 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:08.270 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:08.270 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:08.271 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:08.271 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.QuestionExtMapper.incView - ==>  Preparing: update QUESTION set VIEW_COUNT = VIEW_COUNT + ? where id = ?
+2022-05-14 10:19:08.271 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.QuestionExtMapper.incView - ==> Parameters: 1(Integer), 1558(Long)
+2022-05-14 10:19:08.272 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.QuestionExtMapper.incView - <==    Updates: 1
+2022-05-14 10:19:08.295 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:08.295 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:08.295 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:08.300 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:08.300 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:08.300 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:08.300 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:08.300 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:08.300 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:08.300 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:08.300 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:08.300 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:08.300 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:08.300 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:08.300 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:08.321 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:08.321 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:08.321 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:11.223 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:11.223 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:11.223 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:11.225 [http-nio-10086-exec-2] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 10:19:11.226 [http-nio-10086-exec-2] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 10:19:11.226 [http-nio-10086-exec-2] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 10:19:11.226 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-14 10:19:11.227 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer)
+2022-05-14 10:19:11.227 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 10:19:11.228 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:11.228 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:11.228 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:11.229 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:11.229 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:11.229 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:11.230 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 10:19:11.230 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 10:19:11.230 [http-nio-10086-exec-2] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 10:19:11.262 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:11.262 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:11.262 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:11.262 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:11.262 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:11.262 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:11.262 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:11.262 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:11.262 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:11.262 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:11.262 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:11.262 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:11.262 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:11.262 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:11.263 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 10:19:11.285 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 10:19:11.285 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 10:19:11.286 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:44.685 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:44.686 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:44.687 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:44.689 [http-nio-10086-exec-9] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 14:58:44.690 [http-nio-10086-exec-9] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 14:58:44.690 [http-nio-10086-exec-9] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 14:58:44.690 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 14:58:44.690 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 3(Long)
+2022-05-14 14:58:44.691 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 14:58:44.692 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:44.692 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:44.692 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:44.693 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:44.693 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:44.693 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:44.693 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:44.693 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:44.693 [http-nio-10086-exec-9] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:44.849 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:44.849 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:44.849 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:44.849 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:44.850 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:44.850 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:44.850 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:44.850 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:44.851 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:44.851 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:44.851 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:44.855 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:44.856 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:44.856 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:44.856 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:44.885 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:44.886 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:44.886 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.255 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.255 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.255 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.258 [http-nio-10086-exec-6] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 14:58:46.258 [http-nio-10086-exec-6] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 14:58:46.258 [http-nio-10086-exec-6] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 14:58:46.259 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 14:58:46.259 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 9(Long)
+2022-05-14 14:58:46.259 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 14:58:46.260 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:46.260 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:46.260 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:46.261 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:46.261 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:46.261 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:46.261 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:46.261 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:46.261 [http-nio-10086-exec-6] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:46.298 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.298 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.298 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.299 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.299 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.299 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.300 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.300 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.300 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.300 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.300 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.300 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.303 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.304 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.304 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.330 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.330 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.330 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.944 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.944 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.945 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.946 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 14:58:46.946 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 14:58:46.946 [http-nio-10086-exec-10] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 14:58:46.946 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 14:58:46.946 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 3(Long)
+2022-05-14 14:58:46.947 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 14:58:46.947 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:46.947 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:46.947 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:46.947 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:46.948 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:46.948 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:46.948 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:46.948 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:46.948 [http-nio-10086-exec-10] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:46.980 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.981 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.982 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.982 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.982 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.983 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.983 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.983 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.984 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.984 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.984 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:46.984 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.984 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:46.984 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:46.984 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:47.013 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:47.013 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:47.013 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:47.873 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:47.874 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:47.874 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:47.875 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 14:58:47.875 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 14:58:47.875 [http-nio-10086-exec-1] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 14:58:47.876 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ?
+2022-05-14 14:58:47.876 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer)
+2022-05-14 14:58:47.876 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 14:58:47.877 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:47.877 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:47.877 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:47.877 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:47.877 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:47.877 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:47.877 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:47.877 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:47.878 [http-nio-10086-exec-1] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:47.909 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:47.910 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:47.910 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:47.912 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:47.912 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:47.913 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:47.913 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:47.913 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:47.913 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:47.913 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:47.913 [http-nio-10086-exec-10] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:47.913 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:47.914 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:47.914 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:47.914 [http-nio-10086-exec-3] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:47.936 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:47.936 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:47.936 [http-nio-10086-exec-6] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:48.817 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:48.817 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:48.818 [http-nio-10086-exec-5] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:48.819 [http-nio-10086-exec-5] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==>  Preparing: SELECT count(0) FROM QUESTION
+2022-05-14 14:58:48.819 [http-nio-10086-exec-5] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - ==> Parameters: 
+2022-05-14 14:58:48.819 [http-nio-10086-exec-5] DEBUG c.z.e.mapper.QuestionMapper.selectByExample_COUNT - <==      Total: 1
+2022-05-14 14:58:48.819 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAG from QUESTION LIMIT ? OFFSET ?
+2022-05-14 14:58:48.819 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - ==> Parameters: 3(Integer), 15(Long)
+2022-05-14 14:58:48.819 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.QuestionMapper.selectByExample - <==      Total: 3
+2022-05-14 14:58:48.820 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:48.820 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:48.820 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:48.820 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:48.820 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:48.821 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:48.821 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER where ID = ?
+2022-05-14 14:58:48.821 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - ==> Parameters: 3733(Long)
+2022-05-14 14:58:48.821 [http-nio-10086-exec-5] DEBUG c.zd.esearch.mapper.UserMapper.selectByPrimaryKey - <==      Total: 1
+2022-05-14 14:58:48.850 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:48.850 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:48.850 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:48.850 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:48.850 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:48.850 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:48.850 [http-nio-10086-exec-2] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:48.850 [http-nio-10086-exec-7] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:48.851 [http-nio-10086-exec-9] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:48.851 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:48.851 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:48.851 [http-nio-10086-exec-1] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:48.852 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:48.852 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:48.852 [http-nio-10086-exec-8] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 14:58:48.879 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, AVATAR_URL from USER WHERE ( TOKEN = ? )
+2022-05-14 14:58:48.880 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - ==> Parameters: 8468dd6c-5ef2-4fe8-adca-2ed2e2a2a704(String)
+2022-05-14 14:58:48.880 [http-nio-10086-exec-4] DEBUG com.zd.esearch.mapper.UserMapper.selectByExample - <==      Total: 1
+2022-05-14 15:50:25.097 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2022-05-14 15:50:25.119 [Thread-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

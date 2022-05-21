@@ -1,6 +1,6 @@
 package com.zd.esearch.controller;
 
-import com.zd.esearch.dto.CommentDTO;
+import com.zd.esearch.dto.CommentCreateDTO;
 import com.zd.esearch.dto.ResultDTO;
 import com.zd.esearch.exception.CustomizeErrorCode;
 import com.zd.esearch.model.Comment;
@@ -26,17 +26,17 @@ public class CommentController {
     private CommentService commentService;
     @ResponseBody
     @PostMapping("/comment")
-    public Object  post(@RequestBody CommentDTO commentDTO,
+    public Object  post(@RequestBody CommentCreateDTO commentCreateDTO,
                         HttpServletRequest request){
         User user =(User) request.getSession().getAttribute("user");
         if (user==null){
             return ResultDTO.errOf(CustomizeErrorCode.N0_LOGIN);
         }
         Comment comment = new Comment();
-        comment.setParentId(commentDTO.getParentId());
-        comment.setContent(commentDTO.getContent());
+        comment.setParentId(commentCreateDTO.getParentId());
+        comment.setContent(commentCreateDTO.getContent());
         comment.setCommentator(user.getId());
-        comment.setType(commentDTO.getType());
+        comment.setType(commentCreateDTO.getType());
         comment.setLikeCount(0L);
         comment.setGmtModified(System.currentTimeMillis());
         comment.setGmtCreate(System.currentTimeMillis());

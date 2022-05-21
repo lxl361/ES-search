@@ -17,7 +17,7 @@
     <update id="incView" parameterType="com.zd.esearch.model.Question">
       update QUESTION
       set
-        VIEW_COUNT = VIEW_COUNT + #{viewCount,jdbcType=INTEGER}
+        VIEW_COUNT = VIEW_COUNT + #{viewCount}
       where id = #{id}
     </update>
 

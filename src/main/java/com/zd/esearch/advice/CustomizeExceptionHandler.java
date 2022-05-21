@@ -4,8 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.zd.esearch.dto.ResultDTO;
 import com.zd.esearch.exception.CustomizeErrorCode;
 import com.zd.esearch.exception.CustomizeException;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -24,6 +22,7 @@ import java.io.PrintWriter;
  * @date 2022/2/2 0002 16:41
  */
 @ControllerAdvice
+@ResponseBody
 public class CustomizeExceptionHandler {
     @ExceptionHandler(Exception.class)
     public ModelAndView handle(Throwable e, Model model, HttpServletRequest request, HttpServletResponse response) {
@@ -55,5 +54,6 @@ public class CustomizeExceptionHandler {
             }
             return new ModelAndView("error");
         }
+
     }
 }

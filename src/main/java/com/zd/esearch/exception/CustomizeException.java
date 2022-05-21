@@ -3,7 +3,7 @@ package com.zd.esearch.exception;
 /**
  * @author LC溪苏
  * @version 1.0
- * @description: TODO
+ * @description: 自定义异常类
  * @date 2022/2/2 0002 16:52
  */
 public class CustomizeException extends RuntimeException{
@@ -14,7 +14,7 @@ public class CustomizeException extends RuntimeException{
         this.code= errorCode.getCode();
         this.message=errorCode.getMessage();
     }
-    
+
 
     public Integer getCode() {
         return code;

@@ -12,6 +12,13 @@
     <script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
     <link rel="stylesheet" href="/css/communitity.css"/>
 </head>
+<script type="application/javascript">
+    var closable = window.localStorage.getItem("closable");
+    if (closable=="true"){
+        window.close();
+        window.localStorage.removeItem("closable");
+    }
+</script>
 <body>
 <div th:insert="navigation :: nav"></div>
 <div class="container-fluid main">

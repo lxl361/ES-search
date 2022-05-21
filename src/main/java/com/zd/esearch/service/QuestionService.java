@@ -2,7 +2,6 @@ package com.zd.esearch.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.zd.esearch.dto.PaginationDTO;
 import com.zd.esearch.dto.QuestionDTO;
 import com.zd.esearch.exception.CustomizeErrorCode;
 import com.zd.esearch.exception.CustomizeException;
@@ -17,9 +16,6 @@ import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author LC溪苏
@@ -113,11 +109,6 @@ public class QuestionService {
     }
 
     public void incView(Long id) {
-//        Question question = questionMapper.selectByPrimaryKey(id);
-//        Question updateQuestion = new Question();
-//        updateQuestion.setViewCount(question.getViewCount()+1);
-//        QuestionExample questionExample = new QuestionExample();
-//       questionExample.createCriteria().andIdEqualTo(id);
         Question question = new Question();
         question.setId(id);
         question.setViewCount(1);
